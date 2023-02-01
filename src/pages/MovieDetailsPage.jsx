@@ -2,7 +2,9 @@ import React, { Suspense } from 'react';
 import MagnifyingGlas from '../components/MagnifyingGlass';
 import { Link, useLocation } from 'react-router-dom';
 // import styles from './MovieDetailsPage.module.css';
-import MovieDetailsList from '../components/MovieDetailsList';
+const MovieDetailsList = React.lazy(() =>
+  import('../components/MovieDetailsList')
+);
 
 const MovieDetailsPage = () => {
   const location = useLocation();

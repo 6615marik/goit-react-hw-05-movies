@@ -8,11 +8,10 @@ const MoviesList = ({ movies, location }) => {
     <>
       {movies &&
         movies.map(movie => (
-          <ul key={movie.id}>
-            <li>
-              <Link to={`movies/${movie.id}`} state={{ from: location }}>
-                <p>{movie.title}</p>
-                {/* 
+          <li key={movie.id}>
+            <Link to={`movies/${movie.id}`} state={{ from: location }}>
+              <p>{movie.title}</p>
+              {/* 
                 {movie.poster_path === null ? (
                   <img
                     // className={styles.listItemImage}
@@ -26,9 +25,8 @@ const MoviesList = ({ movies, location }) => {
                     alt={movie.title}
                   />
                 )} */}
-              </Link>
-            </li>
-          </ul>
+            </Link>
+          </li>
         ))}
     </>
   );
@@ -36,7 +34,7 @@ const MoviesList = ({ movies, location }) => {
 
 MoviesList.propTypes = {
   movies: PropTypes.array,
-  location: PropTypes.string,
+  location: PropTypes.object,
 };
 
 export default MoviesList;

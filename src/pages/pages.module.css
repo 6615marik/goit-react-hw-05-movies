@@ -1,0 +1,97 @@
+.navLinks {
+    display: flex;
+    gap: 20px;
+
+    padding: 20px;
+    text-align: start;
+    background-color: rgb(3, 3, 47);
+    font-size: large;
+}
+
+.link {
+    text-decoration: none;
+    color: azure;
+}
+
+h2 {
+    color: #82d81f;
+    margin-left: 15px;
+}
+
+h3 {
+    color: rgb(3, 3, 47);
+    margin-left: 15px;
+}
+
+ul {
+    margin: 0;
+    text-align: start;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    color: rgb(3, 3, 47);
+    margin: 0;
+
+}
+
+p {
+    margin: 10;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: rgb(3, 3, 47);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+    color: rgb(3, 3, 47);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+img {
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+button {
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 15px;
+    background-color: #82d81f;
+    color: rgb(3, 3, 47);
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+
+}
+
+input {
+    padding: 10px;
+    background-color: #82d81f;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(3, 3, 47);
+}
+
+/* div {
+    padding: 10px;
+    color: rgb(3, 3, 47);
+    font-size: 16px;
+    font-weight: bold;
+    /* display: flex;
+    gap: 25px;
+    flex-direction: column; */
+/* } */

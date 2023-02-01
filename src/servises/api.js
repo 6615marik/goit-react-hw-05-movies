@@ -5,7 +5,7 @@ const API_KEY = 'api_key=d2aad9d08af0864f29f140d50d0d9bda';
 // Trending movies -> HomePage
 const getMovies = async () => {
   const res = await axios.get(`${BASE_URL}trending/movie/day?${API_KEY}`);
-  console.log(res.data.results);
+  // console.log(res.data.results);
   const trendingMovies = res.data.results.map(
     ({ id, title, poster_path, vote_average }) => {
       return { id, title, poster_path, vote_average };
