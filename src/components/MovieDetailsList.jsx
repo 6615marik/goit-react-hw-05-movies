@@ -21,9 +21,7 @@ const MovieDetailsList = () => {
     <>
       {moviesId && (
         <>
-          <div
-          //   className={styles.left}
-          >
+          <div>
             <h2>
               {moviesId.title} ({moviesId.release_date.slice(0, 4)})
             </h2>
@@ -32,29 +30,20 @@ const MovieDetailsList = () => {
             </p>
 
             {moviesId.poster_path === null ? (
-              <img
-                // className={styles.listItemImage}
-                src={imgNot}
-                alt={moviesId.title}
-              />
+              <img src={imgNot} alt={moviesId.title} />
             ) : (
               <img
-                // className={styles.listItemImage}
                 src={`https://image.tmdb.org/t/p/w400${moviesId.poster_path}`}
                 alt={moviesId.title}
               />
             )}
           </div>
 
-          <div
-          //   className={styles.right}
-          >
+          <div>
             <h3>Overview:</h3>
             <p>{moviesId.overview}</p>
             <h3>Genres:</h3>
-            <ul
-            //   className={styles.genres}
-            >
+            <ul>
               {moviesId.genres.map(genre => (
                 <li key={genre.id}>{genre.name}</li>
               ))}

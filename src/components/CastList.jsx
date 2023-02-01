@@ -7,43 +7,24 @@ const CastList = data => {
   const cast = data;
 
   return (
-    <ul
-    //   className={styles.castList}
-    >
+    <ul>
       {cast.data && cast.data.length ? (
         cast.data.map(cast => (
-          <li
-            key={cast.id}
-            // className={styles.castItem}
-          >
+          <li key={cast.id}>
             {cast.profile_path === null ? (
               <img src={imgNot} alt={cast.name} width="150" />
             ) : (
               <img
-                // className={styles.image}
                 src={`https://image.tmdb.org/t/p/w400${cast.profile_path}`}
                 alt={cast.name}
               />
             )}
-            <p
-            // className={styles.name}
-            >
-              {cast.name}
-            </p>
-            <p
-            // className={styles.character}
-            >
-              Character: {cast.character}
-            </p>
+            <p>{cast.name}</p>
+            <p>Character: {cast.character}</p>
           </li>
         ))
       ) : (
-        <li
-          key="noInfo"
-          //   className={styles.noInfo}
-        >
-          Sorry, no cast has been added yet
-        </li>
+        <li key="noInfo">Sorry, no cast has been added yet</li>
       )}
     </ul>
   );

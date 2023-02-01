@@ -12,7 +12,7 @@ const MoviesPages = () => {
   useEffect(() => {
     if (!query) return;
     getByQuery(query)
-      .then(setMovies)
+      .then(setMovies && `kvmkv`)
       .catch(function (error) {
         console.log('Error: ' + error);
       });
@@ -22,15 +22,12 @@ const MoviesPages = () => {
     e.preventDefault();
     setMovie(query);
   };
-  // const searchButton = () => {
-  //   setMovie(query);
-  // };
+
   const onChange = e => setSearchParams({ name: e.target.value });
   return (
     <>
       <form onSubmit={handleSubmit}>
         <input
-          // className={styles.inputField}
           type="text"
           value={query}
           onChange={onChange}
@@ -38,12 +35,6 @@ const MoviesPages = () => {
           autoComplete="off"
           autoFocus
         />
-        <button
-        // onClick={searchButton}
-        >
-          {' '}
-          Search
-        </button>
       </form>
       <ul>
         <Suspense fallback={<MagnifyingGlas />}>

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import styles from './ReviewsList.module.css';
 
 const ReviewsList = data => {
   const reviews = data;
@@ -9,28 +8,13 @@ const ReviewsList = data => {
     <>
       {reviews.data && reviews.data.length ? (
         reviews.data.map(review => (
-          <div
-            key={review.id}
-            // className={styles.reviewContainer}
-          >
-            <h3
-            // className={styles.reviewer}
-            >
-              🗣 {review.author}
-            </h3>
-            <p
-            // className={styles.review}
-            >
-              {review.content}
-            </p>
+          <div key={review.id}>
+            <h3>🗣 {review.author}</h3>
+            <p>{review.content}</p>
           </div>
         ))
       ) : (
-        <p
-        //   className={styles.noInfo}
-        >
-          Sorry, no reviews have been added yet
-        </p>
+        <p>Sorry, no reviews have been added yet</p>
       )}
     </>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-// import imgNot from '../img/notimg.webp';
+import imgNot from '../img/notimg.webp';
 
 const MoviesList = ({ movies, location }) => {
   return (
@@ -11,20 +11,15 @@ const MoviesList = ({ movies, location }) => {
           <li key={movie.id}>
             <Link to={`movies/${movie.id}`} state={{ from: location }}>
               <p>{movie.title}</p>
-              {/* 
-                {movie.poster_path === null ? (
-                  <img
-                    // className={styles.listItemImage}
-                    src={imgNot}
-                    alt={movie.title}
-                  />
-                ) : (
-                  <img
-                    // className={styles.listItemImage}
-                    // src={`https:{movie.poster_path}`}
-                    alt={movie.title}
-                  />
-                )} */}
+
+              {movie.poster_path === null ? (
+                <img src={imgNot} alt={movie.title} />
+              ) : (
+                <img
+                  src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}
+                  alt={movie.title}
+                />
+              )}
             </Link>
           </li>
         ))}

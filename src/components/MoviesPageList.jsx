@@ -15,14 +15,9 @@ const MoviesPageList = ({ query, movies }) => {
               >
                 <p>{movie.title}</p>
                 {movie.poster_path === null ? (
-                  <img
-                    // className={styles.listItemImage}
-                    src={imgNot}
-                    alt={movie.title}
-                  />
+                  <img src={imgNot} alt={movie.title} />
                 ) : (
                   <img
-                    // className={styles.listItemImage}
                     src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}
                     alt={movie.title}
                   />
